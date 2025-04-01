@@ -1,0 +1,22 @@
+from rest_framework import serializers
+from ..models import Publication
+
+
+#listseralizer
+class PublicationListSerializers(serializers.ModelSerializer):
+    class meta:
+        model=Publication
+        fields=[ 'name','rating','book_name',  'description', 'created_date' ,'updated_date']
+
+
+
+class PublicationRetrieveSerializers(serializers.ModelSerializer):
+    class meta:
+        model=Publication
+        fields=['name','rating','book_name',  'description', 'created_date' ,'updated_date']
+
+
+class PublicationWriteSerializer(serializers.ModelSerializer):
+    class meta:
+        model=Publication
+        fields='_all_'
