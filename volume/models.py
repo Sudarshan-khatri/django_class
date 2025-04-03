@@ -6,3 +6,7 @@ class Volume(models.Model):
     created_date=models.DateTimeField()
     update_date=models.DateTimeField()
 
+
+    def __str__(self):
+        return self.v_name
+

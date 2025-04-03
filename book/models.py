@@ -31,7 +31,7 @@ class Book(models.Model):
 
 
     def __str__(self):
-        return self.book_name
+        return self.book_name or "Noname"
     
 
 

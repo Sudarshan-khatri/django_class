@@ -10,3 +10,8 @@ class Author(models.Model):
     bio=models.TextField()
     created_date=models.DateTimeField()
     updated_date=models.DateTimeField()
+
+
+
+    def _str_(self):
+        return self.name

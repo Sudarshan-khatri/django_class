@@ -8,3 +8,7 @@ class Publication(models.Model):
     description=models.TextField(max_length=500)
     created_date=models.DateTimeField()
     updated_date=models.DateTimeField()
+
+
+    def __str__(self):
+        return self.name
