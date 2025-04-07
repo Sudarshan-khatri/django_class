@@ -1,12 +1,14 @@
 from rest_framework import viewsets
 from ..models import Book
 from ..serializer.book_serializer import *
+from ..utilities.pagination import PageNumberPagination
 
 
 #class for viewsets:
 class bookViewer(viewsets.ModelViewSet):
     serializer_class=BookListSerializers
     queryset=Book.objects.all().order_by('-id')
+    pagination_class=PageNumberPagination
 
 
 

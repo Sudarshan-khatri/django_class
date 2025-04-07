@@ -3,7 +3,7 @@ from ..models import Author
 
 
 class AuthorListSerializer(serializers.ModelSerializer):
-    class meta:
+    class Meta:
         model=Author
         fields=['name','address','contact','email','book_published','bio','created_date','updated_date']
 
@@ -13,12 +13,12 @@ class AuthorListSerializer(serializers.ModelSerializer):
 
 #class to retrieve from the models:
 class AuthorsRetrieveSerializer(serializers.ModelSerializer):
-    class meta:
+    class Meta:
         model=Author
         fields=['name','address','contact','email']
 
 #class to write from the models
 class AuthorsWriteSerializer(serializers.ModelSerializer):
-    class meta:
+    class Meta:
         model=Author
-        fields='_all_'
+        fields="__all__"

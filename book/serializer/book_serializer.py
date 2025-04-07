@@ -4,18 +4,19 @@ from ..models import Book
 
 #listseralizer
 class BookListSerializers(serializers.ModelSerializer):
-    class meta:
+    class Meta:
         model=Book
-        fields=['id','book_name','book_type','slug' ,'author''vol','book_publication','book_review','language']
+        fields=['id','book_name','book_type','slug' ,'author','vol','book_publication','book_review','language']
 
 
 
 class BookRetrieveSerializers(serializers.ModelSerializer):
-    class meta:
+    class Meta:
         model=Book
         fields=['id','book_name','book_type','slug' ,'author''vol','book_publication','book_review','language']
 
 
 class BookWriteSerializer(serializers.ModelSerializer):
-    class meta:
-        fields='_all_'
+    class Meta:
+        model=Book
+        fields="__all__"

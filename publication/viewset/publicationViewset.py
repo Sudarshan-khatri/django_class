@@ -1,12 +1,13 @@
 from rest_framework import viewsets
 from ..models import Publication
 from ..publication_serializer.serializer import*
-
+from ..utilities.pagination import PageNumberPagination
 
 
 class PublicationViewset(viewsets.ModelViewSet):
     serializer_class=PublicationListSerializer
     queryset=Publication.objects.all().order_by('-id')
+    pagination_class=PageNumberPagination
     
 
 

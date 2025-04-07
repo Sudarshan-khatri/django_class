@@ -3,9 +3,9 @@ from ..models import Volume
 
 
 class VolumeListSerializer(serializers.ModelSerializer):
-    class meta:
+    class Meta:
         model=Volume
-        fields=[ 'v_name','created_date','update_date']
+        fields=['v_name','created_date','update_date']
 
 
 
@@ -13,12 +13,12 @@ class VolumeListSerializer(serializers.ModelSerializer):
 
 #class to retrieve from the models:
 class VolumeRetrieveSerializer(serializers.ModelSerializer):
-    class meta:
+    class Meta:
         model=Volume
         fields=['v_name','created_date']
 
 #class to write from the models
 class VolumeWriteSerializer(serializers.ModelSerializer):
-    class meta:
+    class Meta:
         model=Volume
-        fields='_all_'
+        fields="__all__"

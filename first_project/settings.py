@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'publication',
     'reviews',
     'rest_framework',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -56,6 +57,14 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'first_project.urls'
+
+
+#permission for the project
+REST_FRAMEWORK={
+    'DEFAULT_PERMISSION-CLASSES':[
+        'rest_framework.permissions.IsAuthenticated',
+    ]
+}
 
 TEMPLATES = [
     {

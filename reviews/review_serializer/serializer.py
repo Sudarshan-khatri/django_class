@@ -21,4 +21,4 @@ class ReviewsRetrieveSerializer(serializers.ModelSerializer):
 class ReviewsWriteSerializer(serializers.ModelSerializer):
     class meta:
         model=Reviews
-        fields='_all_'
+        fields="__all__"

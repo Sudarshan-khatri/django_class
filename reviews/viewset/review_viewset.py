@@ -1,12 +1,14 @@
 from rest_framework import viewsets
 from ..models import Reviews
 from ..review_serializer.serializer import*
+from ..utilities.pagination import PageNumberPagination
 
 
 
 class ReviewsViewset(viewsets.ModelViewSet):
     serializer_class=ReviewsListSerializer
     queryset=Reviews.objects.all().order_by('-id')
+    pagination_class=PageNumberPagination
     
 
 
